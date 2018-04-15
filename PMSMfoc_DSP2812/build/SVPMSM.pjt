@@ -1,0 +1,133 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\CCStudio_v3.1\MyProjects\PMSMfoc\build\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\doc\Clarke & Park Transforms on c2000.pdf"
+Source="..\doc\clarke.pdf"
+Source="..\doc\data_log.pdf"
+Source="..\doc\i_park.pdf"
+Source="..\doc\pmsm3_1_28xx.pdf"
+Source="..\doc\qep_theta_drv.pdf"
+Source="..\doc\ramp_gen.pdf"
+Source="..\doc\speed_frq.pdf"
+Source="..\doc\svgen_dq.pdf"
+Source="..\doc\TMS320x281x DSP EV Guide.pdf"
+Source="..\lib\IQmath.lib"
+Source="..\lib\rts2800_ml.lib"
+Source="..\src\clarke.c"
+Source="..\src\DLOG4CHC.asm"
+Source="..\src\DSP281x_DefaultIsr.c"
+Source="..\src\DSP281x_GlobalVariableDefs.c"
+Source="..\src\DSP281x_PieCtrl.c"
+Source="..\src\DSP281x_PieVect.c"
+Source="..\src\DSP281x_SysCtrl.c"
+Source="..\src\DSP281x_usDelay.asm"
+Source="..\src\f281xileg_vdc.c"
+Source="..\src\f281xpwm.c"
+Source="..\src\f281xpwmdac.c"
+Source="..\src\f281xqep.c"
+Source="..\src\ipark.c"
+Source="..\src\main.c"
+Source="..\src\park.c"
+Source="..\src\pid_reg3.c"
+Source="..\src\rampgen.c"
+Source="..\src\rmp_cntl.c"
+Source="..\src\speed_fr.c"
+Source="..\src\svgen_dq.c"
+Source="..\cmd\DSP281x_Headers_nonBIOS.cmd"
+Source="..\cmd\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"..\obj" -i"..\include" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\SVPMSM.map" -o".\SVPMSM.out" -stack0x50 -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\SVPMSM.map" -o".\Release\SVPMSM.out" -w -x
+
+["..\doc\Clarke & Park Transforms on c2000.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\Clarke & Park Transforms on c2000.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\clarke.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\clarke.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\data_log.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\data_log.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\i_park.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\i_park.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\pmsm3_1_28xx.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\pmsm3_1_28xx.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\qep_theta_drv.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\qep_theta_drv.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\ramp_gen.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\ramp_gen.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\speed_frq.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\speed_frq.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\svgen_dq.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\svgen_dq.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\doc\TMS320x281x DSP EV Guide.pdf" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\doc\TMS320x281x DSP EV Guide.pdf" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\cmd\DSP281x_Headers_nonBIOS.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\cmd\DSP281x_Headers_nonBIOS.cmd" Settings: "Release"]
+LinkOrder=1
+
+["..\cmd\F2812_EzDSP_RAM_lnk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\cmd\F2812_EzDSP_RAM_lnk.cmd" Settings: "Release"]
+LinkOrder=1
+

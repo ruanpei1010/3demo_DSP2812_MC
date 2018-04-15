@@ -1,0 +1,1 @@
+1、在LEVEL1下能运行起来的情况：电压：110V；SpeedRef = 0.2；VqTesting = 0.25

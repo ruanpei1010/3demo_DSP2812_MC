@@ -1,0 +1,8 @@
+-----------------------------  SVPMSM.pjt - Debug  -----------------------------
+[main.c] "D:\CCStudio_v3.1\C2000\cgtools\bin\cl2000" -g -fr"../obj" -i"../include" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"../build/Debug.lkf" "main.c"
+
+[Linking...] "D:\CCStudio_v3.1\C2000\cgtools\bin\cl2000" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.
