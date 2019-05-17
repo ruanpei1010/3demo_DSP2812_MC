@@ -29,4 +29,16 @@ void ipark_calc(IPARK *v)
 	v->Beta = _IQmpy(v->Qs,Cosine) + _IQmpy(v->Ds,Sine);  
 }
 
+void ipark_calc(IPARK *v)
+{	
+	_iq Cosine,Sine;
+
+	// Using look-up IQ sine table
+	Sine = _IQsinPU(v->Angle);
+	Cosine = _IQcosPU(v->Angle);
+
+	v->Alpha = _IQmpy(v->Ds,Cosine) - _IQmpy(v->Qs,Sine);
+	v->Beta = _IQmpy(v->Qs,Cosine) + _IQmpy(v->Ds,Sine);  
+}
+
 
