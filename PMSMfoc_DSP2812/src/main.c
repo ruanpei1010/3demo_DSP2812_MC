@@ -50,10 +50,10 @@ Note: In this software, the default inverter is supposed to be DMC1500 board.
 	int16 PwmDacCh2=0;
 	int16 PwmDacCh3=0;
 
-	int16 DlogCh1 = 0;
-	int16 DlogCh2 = 0;
-	int16 DlogCh3 = 0;
-	int16 DlogCh4 = 0;
+	int16 DlogCh1 = 10;
+	int16 DlogCh2 = 10;
+	int16 DlogCh3 = 10;
+	int16 DlogCh4 = 10;
 
 	Uint16 LockRotorFlag = FALSE;
 
