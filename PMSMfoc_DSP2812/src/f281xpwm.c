@@ -34,6 +34,22 @@ void F281X_EV1_PWM_Init(PWMGEN *p)
         EDIS;                         // Disable EALLOW
 }
 
+void F281X_EV1_PWM_Init(PWMGEN *p) 
+{       
+        EvaRegs.T1PR = p->PeriodMax;              // Init Timer 1 period Register 
+        EvaRegs.T1CON.all = PWM_INIT_STATE;       // Symmetrical Operation 
+        EvaRegs.DBTCONA.all = DBTCON_INIT_STATE;  // Init DBTCONA Register                                   
+        EvaRegs.ACTRA.all = ACTR_INIT_STATE;      // Init ACTRA Register         
+
+        EvaRegs.COMCONA.all = 0xA200;             //当T1下溢或周期匹配时，CMPRx重载
+
+        EvaRegs.CMPR1 = p->PeriodMax;             // Init CMPR1 Register 
+        EvaRegs.CMPR2 = p->PeriodMax;             // Init CMPR2 Register 
+        EvaRegs.CMPR3 = p->PeriodMax;             // Init CMPR3 Register 
+        EALLOW;                       // Enable EALLOW 
+        GpioMuxRegs.GPAMUX.all |= 0x003F;   // Setting PWM1-6 as primary output pins
+        EDIS;                         // Disable EALLOW
+}
 
 void F281X_EV1_PWM_Update(PWMGEN *p) 
 {       
