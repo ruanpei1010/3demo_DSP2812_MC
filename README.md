@@ -3,3 +3,4 @@ PMSM_FOC
 280x
 28035
 motor——0415
+motor——0521
