@@ -16,6 +16,7 @@ Note: In this software, the default inverter is supposed to be DMC1500 board.
  04-15-2005	Version 3.20: Support both F280x and F281x targets 
  04-25-2005 Version 3.21: Move EINT and ERTM down to ensure that all initialization
  						  is completed before interrupts are allowed.
+ 07-01-2019 Version 3.21:
 =================================================================================  */
 	#include "DSP281x_Device.h"
 	#include "IQmathLib.h"
